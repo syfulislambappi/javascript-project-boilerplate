@@ -16,6 +16,15 @@ module.exports = {
             {
                 test: /\.html$/i,
                 use: ["html-loader"]
+            },
+            {
+                test: /\.js$/i,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: "babel-loader"
+                    }
+                ]
             }
         ]
     }
